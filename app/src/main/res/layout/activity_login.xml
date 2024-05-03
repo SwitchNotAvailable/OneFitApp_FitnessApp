@@ -71,14 +71,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email Address"
+                android:text="Username"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/etUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="textVisiblePassword|textNoSuggestions"
                 android:drawableEnd="@drawable/done_icon"/>
 
             <View
@@ -92,6 +93,7 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -123,8 +125,10 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Login"
-                app:cornerRadius="32dp"/>
+                android:text="@string/login"
+                android:onClick="onLogin"
+                app:cornerRadius="32dp"
+                tools:ignore="UsingOnClickInXml" />
 
             <View
                 android:layout_width="wrap_content"
